@@ -102,3 +102,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize the map
   initAIMap();
 });
+
