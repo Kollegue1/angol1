@@ -27,4 +27,78 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 1500);
     });
   }
+
+
+    // Add this inside your existing DOMContentLoaded listener
+  function initAIMap() {
+    const mapElement = document.getElementById('aiMap');
+    
+    // Create simulated spreading effect
+    const colors = {
+      sentinel: 'rgba(0, 255, 255, 0.7)',
+      nemesis: 'rgba(255, 0, 0, 0.7)',
+      conflict: 'rgba(180, 0, 255, 0.7)'
+    };
+
+    // Create canvas for performance
+    const canvas = document.createElement('canvas');
+    canvas.width = mapElement.offsetWidth;
+    canvas.height = mapElement.offsetHeight;
+    mapElement.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+
+    // Simulated territories
+    const territories = [];
+    for (let i = 0; i < 50; i++) {
+      territories.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: 5 + Math.random() * 10,
+        team: Math.random() > 0.5 ? 'sentinel' : 'nemesis',
+        growth: 0.1 + Math.random() * 0.3
+      });
+    }
+
+    // Animation loop
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw territories
+      territories.forEach(t => {
+        // Grow territory
+        t.radius += t.growth;
+        
+        // Change team randomly (simulate conflict)
+        if (Math.random() > 0.98) {
+          t.team = ['sentinel', 'nemesis', 'conflict'][Math.floor(Math.random() * 3)];
+        }
+        
+        // Draw circle
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, t.radius, 0, Math.PI * 2);
+        ctx.fillStyle = colors[t.team];
+        ctx.fill();
+        
+        // Reset if too big
+        if (t.radius > 100) {
+          t.radius = 5;
+          t.x = Math.random() * canvas.width;
+          t.y = Math.random() * canvas.height;
+        }
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      canvas.width = mapElement.offsetWidth;
+      canvas.height = mapElement.offsetHeight;
+    });
+  }
+
+  // Initialize the map
+  initAIMap();
 });
