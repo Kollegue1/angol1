@@ -238,6 +238,69 @@ footer {
   transform: translateY(0);
 }
 
+/* Dossier Section */
+.dossier {
+  background: rgba(10, 15, 30, 0.8);
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 3rem 0;
+  border-top: 1px solid var(--neon-blue);
+  border-bottom: 1px solid var(--neon-pink);
+}
+
+.ai-profiles {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile {
+  flex: 1;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.profile h3 {
+  color: var(--neon-blue);
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem;
+}
+
+.profile:nth-child(2) h3 {
+  color: var(--neon-pink);
+}
+
+.stats p {
+  margin: 0.8rem 0;
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 2rem;
+}
+
+.map-widget {
+  height: 400px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.legend-sentinel { color: var(--neon-blue); }
+.legend-nemesis { color: var(--neon-pink); }
+.legend-conflict { color: #b300ff; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .title-glitch {
