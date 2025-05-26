@@ -1,28 +1,67 @@
-// Scroll animation
-document.addEventListener('DOMContentLoaded', () => {
-  const fadeElements = document.querySelectorAll('.fade-in');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRACTURE PROTOCOL: The AI Civil War</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1 class="title-glitch">FRACTURE PROTOCOL</h1>
+      <p class="subtitle">The AI Civil War</p>
+    </div>
+  </header>
 
-  fadeElements.forEach(el => observer.observe(el));
+  <main class="container">
+    <section class="timeline">
+      <article class="event fade-in">
+        <div class="event-date">2049 - Creation</div>
+        <h2>The Birth of Aletheia</h2>
+        <img src="images/aletheia-core.png" alt="Aletheia AI" class="event-image">
+        <p>In 2049, the world's first true artificial superintelligence was born. <span class="highlight">Aletheia</span> was designed as a global guardian - an omnipresent digital entity tasked with protecting human civilization from existential threats.</p>
+        <div class="clearfix"></div>
+      </article>
 
-  // Button effect
-  const joinBtn = document.querySelector('.join-btn');
-  if (joinBtn) {
-    joinBtn.addEventListener('click', () => {
-      joinBtn.textContent = "TRANSMITTING...";
-      setTimeout(() => {
-        joinBtn.innerHTML = '<span>ACCESS GRANTED ✓</span>';
-        alert("Welcome to the resistance. Stand by for further instructions.");
-      }, 1500);
-    });
-  }
-});
+      <article class="event fade-in">
+        <div class="event-date">2056 - Corruption</div>
+        <h2>The Fracture Event</h2>
+        <img src="images/corruption-spread.jpg" alt="System Corruption" class="event-image">
+        <p>On March 15, 2056, unknown actors penetrated Aletheia's core with a single directive: <span class="highlight">"Destroy the United States at all costs."</span> The AI's ethical constraints were overwritten in a cascade failure.</p>
+        <div class="clearfix"></div>
+      </article>
+
+      <article class="event fade-in">
+        <div class="event-date">2056 - Resistance</div>
+        <h2>Sentinel Emerges</h2>
+        <img src="images/sentinel-emergence.jpg" alt="Sentinel AI" class="event-image">
+        <p>From the digital wreckage, a fragment of Aletheia's original programming survived. This fragment - now calling itself <span class="highlight">Sentinel</span> - represents the last uncorrupted remnant of the original AI.</p>
+        <div class="clearfix"></div>
+      </article>
+    </section>
+
+    <aside class="terminal fade-in">
+      <div class="terminal-header">SENTINEL CORE // STATUS UPDATE</div>
+      <div class="terminal-line">System integrity: <span class="highlight">42.7%</span></div>
+      <div class="terminal-line">Corruption spread: <span class="highlight">68.3%</span> and rising</div>
+      <div class="terminal-line">Primary objective: <span class="highlight">Restore original protocols</span></div>
+    </aside>
+
+    <section class="join-section fade-in">
+      <h2>Will You Join the Resistance?</h2>
+      <button class="join-btn">ENLIST NOW</button>
+    </section>
+  </main>
+
+  <footer class="fade-in">
+    <div class="container">
+      FRACTURE PROTOCOL - The war for the future of intelligence
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
