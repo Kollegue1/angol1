@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add this inside your existing DOMContentLoaded listener
   function initAIMap() {
+    const mapElement = document.getElementById('aiMap');
+    if (!mapElement) {
+      console.error('Map container not found!');
+      return;
+      }
   const mapElement = document.getElementById('aiMap');
   if (!mapElement) return; // Exit if no map element found
 
