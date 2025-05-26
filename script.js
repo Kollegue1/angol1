@@ -1,5 +1,7 @@
-// Scroll animation
-document.addEventListener('DOMContentLoaded', () => {
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Scroll animations
   const fadeElements = document.querySelectorAll('.fade-in');
   
   const observer = new IntersectionObserver((entries) => {
@@ -17,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Button effect
   const joinBtn = document.querySelector('.join-btn');
   if (joinBtn) {
-    joinBtn.addEventListener('click', () => {
-      joinBtn.textContent = "TRANSMITTING...";
+    joinBtn.addEventListener('click', function() {
+      this.textContent = "TRANSMITTING...";
       setTimeout(() => {
-        joinBtn.innerHTML = '<span>ACCESS GRANTED ✓</span>';
+        this.innerHTML = '<span>ACCESS GRANTED ✓</span>';
         alert("Welcome to the resistance. Stand by for further instructions.");
       }, 1500);
     });
