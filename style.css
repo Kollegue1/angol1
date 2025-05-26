@@ -1,49 +1,203 @@
+:root {
+  --neon-blue: #0ff;
+  --neon-pink: #f0f;
+  --matrix-green: #0f0;
+  --dark-bg: #0a0a12;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rajdhani', sans-serif;
-  background: url("https://i.imgur.com/X5v6QFD.gif") no-repeat center center fixed;
-  background-size: cover;
-  color: #e0e0e0;
+  font-family: 'Electrolize', sans-serif;
+  background-color: var(--dark-bg);
+  color: #eee;
   line-height: 1.6;
 }
 
-/* Hero Section */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 .hero {
   text-align: center;
-  padding: 50px 0;
+  padding: 5rem 0;
+  background: linear-gradient(rgba(10, 10, 20, 0.7), rgba(10, 10, 20, 0.9)), 
+              url('../images/hero-bg.jpg') center/cover no-repeat;
 }
 
-.hero-image {
-  max-width: 300px;
-  margin: 20px auto;
-  border: 2px solid #00ffff;
+.title-glitch {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 4rem;
+  margin: 0;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--neon-blue);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 50px;
+  margin: 3rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--neon-blue), var(--neon-pink));
+}
+
+.event {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: rgba(20, 20, 30, 0.7);
   border-radius: 5px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  border-left: 3px solid var(--neon-blue);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Story Images */
-.story-image {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+.event::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--neon-blue);
+  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.3);
+}
+
+.event h2 {
+  color: var(--neon-blue);
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.event-date {
+  display: inline-block;
+  background: rgba(0, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--neon-blue);
+}
+
+.event-image {
+  float: right;
+  width: 200px;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  shape-outside: circle(50%);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.terminal {
+  background: rgba(0, 20, 10, 0.8);
+  border: 1px solid var(--matrix-green);
   border-radius: 5px;
-  margin: 15px 0;
-  border: 1px solid #00aaff;
+  padding: 1.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 3rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Glitch Text Effect */
-.glitch-text {
-  color: #ff00aa;
-  animation: glitch 1s infinite;
+.terminal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: rgba(0, 50, 0, 0.5);
+  border-bottom: 1px solid var(--matrix-green);
+}
+
+.terminal-header {
+  color: var(--matrix-green);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-line {
+  color: var(--matrix-green);
+  margin: 0.5rem 0;
+}
+
+.terminal-line::before {
+  content: '> ';
+}
+
+.highlight {
+  color: var(--neon-pink);
   font-weight: bold;
 }
 
-@keyframes glitch {
-  0% { text-shadow: 2px 0 red; }
-  25% { text-shadow: -2px 0 cyan; }
-  50% { text-shadow: 2px 0 lime; }
-  100% { text-shadow: -2px 0 yellow; }
+.join-section {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 2rem;
+  background: rgba(0, 10, 20, 0.7);
+  border-radius: 5px;
+  border-top: 1px solid var(--neon-blue);
+  border-bottom: 1px solid var(--neon-pink);
 }
 
-/* Rest of your CSS remains the same */
+.join-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid var(--neon-blue);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .title-glitch {
+    font-size: 2.5rem;
+  }
+  
+  .event-image {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
