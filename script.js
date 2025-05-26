@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Map container not found!');
       return;
       }
-  const mapElement = document.getElementById('aiMap');
-  if (!mapElement) return; // Exit if no map element found
 
   // Wait for element to be fully rendered
   setTimeout(() => {
