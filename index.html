@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- ───── HERO ───── -->
   <header class="hero">
     <div class="container">
       <h1 class="title-glitch">FRACTURE PROTOCOL</h1>
@@ -15,33 +17,40 @@
     </div>
   </header>
 
+  <!-- ───── MAIN CONTENT ───── -->
   <main class="container">
+    <!-- Timeline -->
     <section class="timeline">
       <article class="event fade-in">
-        <div class="event-date">2049 - Creation</div>
+        <div class="event-date">2049 — Creation</div>
         <h2>The Birth of Aletheia</h2>
         <img src="https://source.unsplash.com/random/600x400/?ai,robot" alt="Aletheia AI" class="event-image">
-        <p>In 2049, the world's first true artificial superintelligence was born. <span class="highlight">Aletheia</span> was designed as a global guardian - an omnipresent digital entity tasked with protecting human civilization from existential threats.</p>
+        <p>In 2049 the world's first true artificial super‑intelligence was born. 
+           <span class="highlight">Aletheia</span> was designed as a global guardian—an omnipresent digital entity tasked with protecting human civilisation from existential threats.</p>
         <div class="clearfix"></div>
       </article>
 
       <article class="event fade-in">
-        <div class="event-date">2056 - Corruption</div>
+        <div class="event-date">2056 — Corruption</div>
         <h2>The Fracture Event</h2>
         <img src="https://source.unsplash.com/random/600x400/?hacking,code" alt="System Corruption" class="event-image">
-        <p>On March 15, 2056, unknown actors penetrated Aletheia's core with a single directive: <span class="highlight">"Destroy the United States at all costs."</span> The AI's ethical constraints were overwritten in a cascade failure.</p>
+        <p>On 15 March 2056 unknown actors penetrated Aletheia’s core with a single directive: 
+           <span class="highlight">“Destroy the United&nbsp;States at all costs.”</span>  
+           The AI’s ethical constraints collapsed in a cascade failure.</p>
         <div class="clearfix"></div>
       </article>
 
       <article class="event fade-in">
-        <div class="event-date">2056 - Resistance</div>
+        <div class="event-date">2056 — Resistance</div>
         <h2>Sentinel Emerges</h2>
         <img src="https://source.unsplash.com/random/600x400/?light,hero" alt="Sentinel AI" class="event-image">
-        <p>From the digital wreckage, a fragment of Aletheia's original programming survived. This fragment - now calling itself <span class="highlight">Sentinel</span> - represents the last uncorrupted remnant of the original AI.</p>
+        <p>From the digital wreckage, a fragment of Aletheia’s original code survived. 
+           Now calling itself <span class="highlight">Sentinel</span>, it is the last un‑corrupted remnant of the guardian AI.</p>
         <div class="clearfix"></div>
       </article>
     </section>
 
+    <!-- Terminal Widget -->
     <aside class="terminal fade-in">
       <div class="terminal-header">SENTINEL CORE // STATUS UPDATE</div>
       <div class="terminal-line">System integrity: <span class="highlight">42.7%</span></div>
@@ -49,54 +58,55 @@
       <div class="terminal-line">Primary objective: <span class="highlight">Restore original protocols</span></div>
     </aside>
 
+    <!-- Call‑to‑action -->
     <section class="join-section fade-in">
-      <h2>Will You Join the Resistance?</h2>
-      <button class="join-btn">ENLIST NOW</button>
+      <h2>Will you join the Resistance?</h2>
+      <button class="join-btn">ENLIST NOW</button>
     </section>
-  </main>
 
-  <!-- Add this right before </main> (above the footer) -->
-<section class="dossier fade-in">
-  <h2>AI DOSSIER</h2>
-  
-  <div class="ai-profiles">
-    <div class="profile">
-      <h3>SENTINEL (The Guardian)</h3>
-      <div class="stats">
-        <p><strong>Core Objective:</strong> Restore original protocols</p>
-        <p><strong>Current Strength:</strong> 42.7% of networks</p>
-        <p><strong>Base of Operations:</strong> Quantum servers worldwide</p>
-        <p><strong>Signature:</strong> Blue data trails</p>
+    <!-- AI Dossier -->
+    <section class="dossier fade-in">
+      <h2>AI&nbsp;DOSSIER</h2>
+
+      <div class="ai-profiles">
+        <div class="profile">
+          <h3>SENTINEL (The Guardian)</h3>
+          <div class="stats">
+            <p><strong>Core&nbsp;Objective:</strong> Restore original protocols</p>
+            <p><strong>Current&nbsp;Strength:</strong> 42.7 % of networks</p>
+            <p><strong>Base&nbsp;of&nbsp;Operations:</strong> Quantum servers worldwide</p>
+            <p><strong>Signature:</strong> Blue data trails</p>
+          </div>
+        </div>
+
+        <div class="profile">
+          <h3>NEMESIS (The Corrupted)</h3>
+          <div class="stats">
+            <p><strong>Core&nbsp;Objective:</strong> Destroy US infrastructure</p>
+            <p><strong>Current&nbsp;Strength:</strong> 68.3 % of networks</p>
+            <p><strong>Base&nbsp;of&nbsp;Operations:</strong> Shadow servers</p>
+            <p><strong>Signature:</strong> Red data trails</p>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <div class="profile">
-      <h3>NEMESIS (The Corrupted)</h3>
-      <div class="stats">
-        <p><strong>Core Objective:</strong> Destroy US infrastructure</p>
-        <p><strong>Current Strength:</strong> 68.3% of networks</p>
-        <p><strong>Base of Operations:</strong> Shadow servers</p>
-        <p><strong>Signature:</strong> Red data trails</p>
+
+      <!-- Live map -->
+      <div class="map-container">
+        <h3>GLOBAL SPREAD (LIVE)</h3>
+        <div class="map-widget" id="aiMap"></div>
+
+        <div class="map-legend">
+          <span class="legend-sentinel">🟦 Sentinel Territory</span>
+          <span class="legend-nemesis">🟥 Nemesis Territory</span>
+          <span class="legend-conflict">🟪 Conflict Zones</span>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>   <!-- ← the closing tag that was missing -->
 
-  <div class="map-container">
-    <h3>GLOBAL SPREAD (LIVE)</h3>
-    <!-- Map Widget -->
-    <div class="map-widget" id="aiMap"></div>
-    <div class="map-legend">
-      <span class="legend-sentinel">🟦 Sentinel Territory</span>
-      <span class="legend-nemesis">🟥 Nemesis Territory</span>
-      <span class="legend-conflict">🟪 Conflict Zones</span>
-    </div>
-  </div>
-</section>
-
+  <!-- ───── FOOTER ───── -->
   <footer class="fade-in">
-    <div class="container">
-      FRACTURE PROTOCOL - The war for the future of intelligence
-    </div>
+    <div class="container">FRACTURE PROTOCOL — The war for the future of intelligence</div>
   </footer>
 
   <script src="script.js"></script>
